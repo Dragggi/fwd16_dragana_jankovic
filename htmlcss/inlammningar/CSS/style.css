@@ -1,3 +1,26 @@
-p{
-    color:blue;
+
+#navcontainer ul { 
+list-style-type: none;
+margin: 0;
+padding: 0;
+text-align: center;  
 }
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a { 
+text-decoration: none;
+padding: .2em 1em;
+}
+
+#navcontainer ul li a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+
+#logo img {
+    position: relative;
+    top: 0px;
+    right: 0px;
+
