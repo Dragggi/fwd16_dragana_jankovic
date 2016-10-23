@@ -1,0 +1,43 @@
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
+
+body{
+background-image: url("../images/o-SCOTLAND-facebook1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+background-position: center center;
+display: flex;
+align-items: center;
+justify-content: center;
+height:100vh;
+}
+
+.landingpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+  height:50vh;
+  flex-flow:column wrap;
+}
+
+.landingpage a {
+    text-decoration: none; 
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+h4 {
+    text-align: left;
+    font-weight: normal;
+    
+}
+
