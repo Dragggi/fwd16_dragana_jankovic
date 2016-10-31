@@ -1,0 +1,203 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightslategrey;
+    background-image: url(../images/o-SCOTLAND-facebook1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;    
+    background-attachment: fixed;      
+    background-size: cover;
+}
+
+/* dropdown start: */
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.flex-nav ul ul ul {
+    position: absolute;
+    
+    left:100%;
+}
+
+.flex-nav ul li a:hover{
+	color: #ccc;
+	text-decoration: none;
+	background-color:seagreen;
+	
+}
+
+.flex-nav ul li:hover ul{
+	display: block;
+	background-color: seagreen;
+}
+
+.flex-nav ul ul{
+    display: flex;
+	display: none;
+	border-top: 0;
+}
+
+	
+.flex-nav ul li a:hover{
+	color: black;
+	background-color: darkslategrey;
+	
+}	
+
+/* dropdown end */
+
+
+.flex-nav ul li:last-child a,visited{
+	border-right:0;
+	}
+
+
+.flex-nav, .social {
+    order: -1;
+}
+
+.fa-times, .fa-bars {
+  color: seagreen;
+  padding: 0.1em 0.8em; 
+  }
+
+
+#nav-toggle {
+ display: none; 
+}
+
+label > .fa-times {
+    display: none;
+  }
+
+
+#nav-toggle,
+.fa-times {
+  display: none;
+}
+
+#nav-toggle:checked ~ .flex-nav {
+ display: block;
+}
+
+#nav-toggle:checked ~ header .fa-bars {
+ display: none;
+}
+
+#nav-toggle:checked ~ header .fa-times {
+  display: block;
+}
+
+
+
+.flex-nav {
+    display: none;
+}
+
+
+nav ul {  
+    display: flex;
+    list-style: none;
+    margin: 0; padding: 0;
+    flex-flow: wrap;
+    /*flex-flow: column wrap;*/
+    }
+
+a {
+width: 100%;
+display: inline-block;
+}
+
+.social  {
+    display: flex;
+    flex: 3;
+}
+
+
+a {
+text-decoration: none;     
+display: inline-block;
+text-align: center;  
+padding: 20px 20px;
+color: white;
+background: #000; 
+background: rgba(0, 0, 0, 0.2); 
+transition: all 0.5s;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+
+
+/*flex*/
+
+.flex-nav li {   
+    flex-basis: 100%;
+    
+}
+
+.social li {    
+    flex: 1 1 25%;
+    
+    
+}
+
+.flex-nav li a {  
+    flex: 1 1 25%;
+    }
+
+@media all and (min-width:500px){
+
+.social  {
+     display: flex;
+      order: -3;
+      flex-basis: 100%;
+  }
+
+
+    .flex-nav  {    
+        flex: 1 1 50%;
+}
+
+    label {
+        display: none;
+    }
+ .flex-nav {
+    display: block;
+    
+  }
+
+    
+}
+
+
+@media all and (min-width:1000px){
+
+    .social {
+    position: relative;
+}
+ .flex-nav li {   
+     flex: 3;
+ }
+ .flex-nav, .social { 
+     flex: 1;
+     order: 1;
+ }
+
+
+
+ }
+
+
+
+    
