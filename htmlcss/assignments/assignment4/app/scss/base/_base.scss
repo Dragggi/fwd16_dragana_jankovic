@@ -1,4 +1,4 @@
-// Modern border-box applied everywhere.
+
 html {
   box-sizing: border-box;
 }
@@ -9,8 +9,12 @@ html {
   box-sizing: inherit;
 }
 
-// Mandatory select styling.
-::selection {
-  color: map-get($color, bright);
-  background: map-get($color, accent1);
+body {
+    background-color: lightslategrey;
+    background-image: url(../images/o-SCOTLAND-facebook1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;    
+    background-attachment: fixed;      
+    background-size: cover;
 }
+

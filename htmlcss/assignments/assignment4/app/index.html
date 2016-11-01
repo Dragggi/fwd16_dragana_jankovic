@@ -1,41 +1,72 @@
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+    <head>
 
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/print.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!--endbuild-->
-</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>asignment4</title>
+<link href="css/styles.css" rel="stylesheet"/> 
+<link href="css/print.css" rel="stylesheet"/>   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ </head>
+ <body> 
+  
+    <input type="checkbox" id="nav-toggle">
+    <header>
+    <label for="nav-toggle"><i class="fa fa-bars fa-3x"></i>
+    <i class="fa fa-times fa-3x"></i></label>
+    </header>
 
-<body>
-  
-  
- 
+
 <nav class="flex-nav">
      <ul>
+
          <li><a href="#">Home</a></li>
          <li><a href="#">Drinks</a></li>
-         <li><a href="#">Meetings</a></li>
+         <li><a href="#">Meetings</a>
+         <ul class="menu1">
+            <li><a href="">Location</a></li>
+            <li><a href="">Location2</a></li>
+            <li><a href="">Whatsup</a>
+
+                <ul class="menu2">
+                    <li> <a href="">Signup</a></li>
+                    <li> <a href="">Signup2</a></li>
+                    
+                </ul>
+             </li>
+         </ul>
+         </li>
+         
+         
+
          <li><a href="#">About us</a></li>
          <li><a href="#">Contact us</a></li>
          <li><a href="#">Find us</a></li>
-        <li class="social">
-   <a href="https://twitter.com/?lang=sv" target="_blank">
-       <i class="fa fa-twitter"></i></a>
-    <a href="https://sv-se.facebook.com/" target="_blank">
-        <i class="fa fa-facebook"></i></a>
-    <a href="https://github.com/" target="_blank">
-     <i class="fa fa-github"></i></a>
-    <a href="https://www.instagram.com/" target="_blank">
-     <i class="fa fa-instagram"></i></a>
+         
+        <div class="social">
+            
+   <li><a href="https://twitter.com/?lang=sv" target="_blank">
+       <i class="fa fa-twitter"></i></a></li>
+
+    <li><a href="https://sv-se.facebook.com/" target="_blank">
+        <i class="fa fa-facebook"></i></a></li>
+
+   <li><a href="https://github.com/" target="_blank">
+     <i class="fa fa-github"></i></a></li>
+
+    <li><a href="https://www.instagram.com/" target="_blank">
+     <i class="fa fa-instagram"></i></a></li>
+   
+        </div>
+     
 </ul> 
 </nav>
 
 <div id="container">
+
 
  <!-- flexcard 1 -->
 
@@ -63,9 +94,9 @@
                              <img src="images/japanese-whisky-hibiki.jpg" alt="first"/>
      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fuga, tempora autem ab! Maxime molestiae, nostrum aliquid eius id exercitationem impedit voluptatibus facere similique, quaerat mollitia non dolorem deserunt placeat!</p>
     
-
+<div class="button">
     <button type="button">See More</button>
-
+</div>
     </section>
     </div>
     
@@ -148,6 +179,7 @@
           </section>
  <section class="sectwo">
                          <article>
+                             <img src="images/Bilder-zum-Whisky-Acrylglas-Aludibond.jpg" alt="fourth"/>
      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere fuga, tempora autem ab! Maxime molestiae, nostrum aliquid eius id exercitationem impedit voluptatibus facere similique, quaerat mollitia non dolorem deserunt placeat!</p>
     </article>
 
@@ -157,7 +189,7 @@
     
 
   <!-- flexcard 5 -->
-  <div class="flexcard">
+  <div class="flexcardfive">
           <section class="sectone">
              <div class="title">Whiskey</div>
 
@@ -210,3 +242,4 @@
 
  </body>
 </html>
+

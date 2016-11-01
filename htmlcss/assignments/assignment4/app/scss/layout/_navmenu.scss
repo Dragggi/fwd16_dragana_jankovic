@@ -1,0 +1,245 @@
+/* hamburgareikon*/
+@mixin fa-icons {
+      padding: 0.1em 0.8em;
+      color: $font-c;
+  }
+
+.fa-times, .fa-bars {
+    @include fa-icons; 
+  }
+
+  #nav-toggle {
+ display: none; 
+}
+
+label > .fa-times {
+    display: none;
+  }
+
+
+#nav-toggle,
+.fa-times {
+  display: none;
+}
+
+#nav-toggle:checked ~ .flex-nav {
+ display: block;
+}
+
+#nav-toggle:checked ~ header .fa-bars {
+ display: none;
+}
+
+#nav-toggle:checked ~ header .fa-times {
+  display: block;
+}
+
+/*nav*/
+
+.flex-nav {
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.flex-nav ul {  
+    display: flex;
+    list-style: none;
+    margin: 0; padding: 0;
+    flex-flow: wrap;
+}
+
+
+
+
+
+/* dropdown+hover*/
+
+.flex-nav ul li {
+.menu1 {
+    position: relative;
+}
+
+.menu2  {
+    position: absolute;
+    align-content: right;
+    
+} }
+
+.flex-nav ul li:last-child a,visited{
+	border-right:0;
+	}
+
+
+/* socialicons*/
+  
+.social  {
+    display: flex;
+    flex: 3;
+    order: -1;
+
+    @include respond-to('tablet') {
+     display: flex;
+      order: -3;
+      flex-basis: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+a {
+text-decoration: none;     
+display: inline-block;
+text-align: center;  
+padding: 20px 20px;
+color: white;
+background: #000; 
+background: rgba(0, 0, 0, 0.2); 
+transition: all 0.5s;
+width: 100%;
+
+&:hover {
+  background: rgba(0, 0, 0, 0.5); 
+}
+}
+
+
+
+
+
+
+.flex-nav li {   
+    flex-basis: 100%;
+    
+}
+
+.social li {    
+    flex: 1 1 25%;
+    
+    
+}
+
+.flex-nav li a {  
+    flex: 1 1 25%;
+    }
+
+
+
+
+
+
+
+  li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+
+  .flex-nav ul {
+    &.menu1 {
+        li{
+            position: relative;
+
+        }
+  }
+  
+
+    .flex-nav, .menu2  {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    transform: translateX(99.9%);
+    top:0;
+}
+  }
+
+  .flex-nav ul ul{
+    display: none;
+    position: absolute;
+	border-top: 0;
+     z-index: 300;
+}
+
+.flex-nav ul li:hover > ul {
+    display:inherit;
+}
+.flex-nav ul li:hover > ul  {
+	display: block;
+	background-color: seagreen;
+}
+
+
+
+.flex-nav ul ul ul li:hover ul li
+{
+    position: absolute;
+    display: block;
+    background-color: white;
+    z-index: 300;
+
+}
+
+
+
+
+
+
+
+    .flex-nav li {  
+        @include respond-to('tablet') {
+        flex-flow: wrap;
+        flex: 1 1 50%;
+        
+}
+}
+
+
+
+
+--desktop--
+
+    .social {
+    @include respond-to('desktop')
+{
+    position: relative;
+}
+    }
+
+
+ .flex-nav li { 
+     @include respond-to('desktop')
+{   display: flex;
+     flex: 3;
+ }
+ }
+
+ .flex-nav, .social { 
+     @include respond-to('desktop'){
+
+    
+     flex: 1;
+     order: 1;
+}
+ }
+
+ .flex-nav {
+    @include respond-to ('desktop'){
+    display: block;
+ }
+ }
+
+label {
+    @include respond-to('desktop') {
+        display: none;
+    }
+
+}
+
+
+ 
+
+
+ 
