@@ -1,0 +1,36 @@
+        
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 90%;
+    align-items: center;
+    margin: auto;
+    
+
+     @include respond-to('tablet') {
+        flex-direction: row;
+        
+        
+    }
+
+   
+}
+
+.foot {
+    display: flex;
+    background-color: $c-cards; 
+    margin: 10px;
+    flex: 1 1 100%;
+    align-items: center;
+    
+
+@include respond-to('tablet') {
+flex: 1 1 33,33%;
+
+
+}
+     
+       
+   
+}

@@ -1,0 +1,68 @@
+/* hamburgareikon*/
+
+.fa-times, .fa-bars {
+    @include fa-icons; 
+  }
+
+label > .fa-times {
+    @extend %noshow;
+  }
+
+#nav-toggle {
+  @extend %noshow;
+}
+
+#nav-toggle:checked ~ .flex-nav {
+ display: block;
+}
+
+#nav-toggle:checked ~ header {
+
+ .fa-bars {
+ @extend %noshow;
+}
+.fa-times {
+    display: block;
+}}
+
+/*meny*/
+
+.flex-nav {
+    display: none;
+    background-color: $c-nav; 
+    
+ul  {
+    display: flex;
+    list-style: none;
+    margin: 0; padding: 0;
+    flex-flow: wrap;
+    }
+
+li {  
+    flex-basis: 100%;
+}
+
+    a {
+    flex: 1 1 25%;    
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;  
+    padding: 20px 20px;
+    transition: all 0.5s;
+    width: 100%;
+    background: $c-nav;
+    color: $c-font;
+    &:hover {
+  background:$c-hoover;
+}
+  }
+    }
+
+.social  {
+    display: flex;
+    flex: 3;
+    order: -1; 
+li {
+    flex: 1 1 25%;
+}    
+    }

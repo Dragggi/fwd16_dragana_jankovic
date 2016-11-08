@@ -1,0 +1,34 @@
+/* flexcards*/
+
+
+
+#container {
+    @extend %container;
+
+    @include respond-to('tablet') {
+        flex-wrap: wrap;
+        flex-direction: row;
+}}
+
+
+.flexcard {
+    @extend %flexcard;
+
+@include respond-to('tablet') {
+        width: 24%*2;
+
+    &:nth-child(5n){
+        min-width: 100%;
+        
+        
+    } }
+}
+        
+
+    
+
+
+    
+
+
+

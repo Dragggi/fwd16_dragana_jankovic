@@ -1,0 +1,28 @@
+///placeholders
+
+%noshow {
+    display: none;
+}
+
+%container {
+    display: flex;
+    background-color: $c-font;
+    max-width: 90%;
+	margin: 2rem auto;
+	
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+   }
+
+%flexcard {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-items: center;
+   
+        
+    
+}

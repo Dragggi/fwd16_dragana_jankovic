@@ -1,0 +1,21 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $c-background;
+    
+}
+
+img {
+     width: 100%;
+    display: flex;
+    align-items: center;  
+}

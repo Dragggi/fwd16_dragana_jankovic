@@ -1,0 +1,86 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightslategrey;
+    background-image: url(../images/o-SCOTLAND-facebook1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;    
+    background-attachment: fixed;      
+    background-size: cover;
+}
+
+
+nav ul {  
+    display: flex;
+    list-style: none;
+    margin: 0; padding: 0;
+    flex-wrap: wrap;
+    }
+
+a {
+width: 100%;
+display: inline-block;
+}
+
+.social {
+    display: flex;
+}
+
+
+a {
+text-decoration: none;     
+display: inline-block;
+text-align: center;  
+padding: 20px 20px;
+color: white;
+background: #000; 
+background: rgba(0, 0, 0, 0.2); 
+transition: all 0.5s;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+
+/*flex*/
+
+.flex-nav li {   
+    flex-basis: 100%;
+}
+
+.social li {    
+    flex: 1 1 25%;
+    
+}
+
+.flex-nav li a {  
+    flex: 1 1 25%;
+    }
+
+@media all and (min-width:500px){
+    .flex-nav li {    
+        flex: 1 1 50%;
+    }
+}
+
+
+@media all and (min-width:1000px){
+ .flex-nav li {   
+     flex: 3;
+ }
+ .flex-nav, .social { 
+     flex: 1;
+ }
+ }
+
+
+
+    

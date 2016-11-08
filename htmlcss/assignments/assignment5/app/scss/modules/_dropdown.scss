@@ -1,0 +1,26 @@
+
+    /*dropdown*/
+
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.flex-nav ul {
+   position: relative; 
+}
+
+.flex-nav ul ul {
+    display: none;
+    position: absolute;
+	right: 0;
+    left: 0;
+}
+
+
+.flex-nav ul li:hover > ul {
+    display:inherit;
+}
+.flex-nav ul li:hover > ul  {
+	display: block;
+	background-color: $c-hoover;
+}
+

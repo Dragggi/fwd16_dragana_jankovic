@@ -1,0 +1,133 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Courier New, Courier, monospace; color: white;
+    font-size: 12pt;
+    
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    max-width: 920px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    flex: 1;
+
+}
+
+.flexcard, .flexcardfive {  
+    width: 96%;
+    margin: 0 auto 2%;
+    opacity: 0.7;
+    background: seagreen;
+    border: 1px solid white;
+    
+    display: flex;
+    
+    justify-content: space-between;
+     flex-flow: column;
+}
+
+.sectone, .sectwo {
+    width: auto;
+    padding: 10px;
+   height: 100%;
+    justify-content: space-between;
+    flex-direction: column; 
+    
+    
+    
+   
+}
+
+
+
+
+.title {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.author {
+    text-align: right;
+    flex: 1;
+    
+}
+
+.info {
+   display: flex;
+   flex: 1;
+   
+    
+}
+
+img {
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    
+    
+ 
+}
+
+
+button {
+    background-color: gold;
+    color: seagreen;
+    width: 100%;
+    border: none;
+    margin-top: auto;
+    
+    
+}
+
+
+@media all and (min-width:500px){
+    .flex-nav li {    
+        flex: 1 1 50%;
+        }
+
+.flexcard { 
+    width: 48%;
+    height: 100%;
+   
+
+   
+}
+
+.flexcardfive {
+    width: 98%;
+    
+}
+ 
+
+
+
+}
+
+
+@media all and (min-width:1000px){
+ .flex-nav li {   
+     flex: 3;
+ }
+ .flex-nav, .social { 
+     flex: 1;
+ }
+
+
+
+
+
+
+
+ } 

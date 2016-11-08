@@ -1,0 +1,44 @@
+
+/// Font icons
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+/*color*/
+
+$c-font: white; 
+$c-nav: rgba(0, 0, 0, 0.2);
+$c-hoover: 	#5D8AA8;
+$c-cards: #cce6ff;
+$c-button: #C9FFE5;
+$c-background: lightgrey;
+
+$font-stack: Courier New, Courier;
+
+
+
+
+
+
+/// Breakpoint map
+
+$breakpoints: (
+  'mobile':  ( min-width: 30.000em ),
+  'tablet': ( min-width: 42.000em ),
+  'desktop':  ( min-width: 62.000em ),
+  'wide':  ( min-width: 75.000em )
+) !default;
+
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
