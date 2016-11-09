@@ -6,6 +6,7 @@ footer {
     max-width: 90%;
     align-items: center;
     margin: auto;
+    margin-bottom: 20px;
     
 
      @include respond-to('tablet') {
@@ -19,18 +20,17 @@ footer {
 
 .foot {
     display: flex;
-    background-color: $c-cards; 
-    margin: 10px;
+    margin: 55px 20px;
     flex: 1 1 100%;
-    align-items: center;
+    align-content: center;
     
 
 @include respond-to('tablet') {
 flex: 1 1 33,33%;
-
+align-items: center;
+justify-content: space-around;
+ 
+}
 
 }
-     
-       
-   
-}
+
