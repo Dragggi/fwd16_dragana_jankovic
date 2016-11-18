@@ -1,0 +1,117 @@
+///Mixin using breakpoint map 
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+///Mixin for page background
+/// @param {url} $imagepath - set the url of the page-bg
+@mixin page-bg($imagepath,$bgrepeat:no-repeat,$bgattachment:fixed,$bgsize:cover,$bgpos:center center) {
+	
+		color: map-get($color, bright);
+  		background: map-get($color, accent1);
+        background-image: url($imagepath);
+        background-repeat: $bgrepeat;
+		background-attachment:$bgattachment;
+		background-size:$bgsize;
+    background-position:$bgpos;
+    
+	}
+
+  
+
+
+
+
+
+
+/// Mixin targets the rules for label : after
+
+@mixin label-after {
+position: absolute;
+  right: 1em;
+  top: .2em;
+  content: "\2261";
+  font-size: 1.8em;
+  
+  padding: 10px;
+  margin: 5 auto;
+
+
+  }
+  
+
+
+
+
+  /// No-show for the label at medium 
+ @mixin no-label-at-medium {
+   @include respond-to('medium'){
+	display: none;
+ }
+ }
+
+ /// Default for the nav at medium 
+ @mixin default-nav-at-medium {
+   @include respond-to('medium'){
+  position: absolute;
+  width: 100%;
+  background: purple;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+   }
+ /// Mixin which rules nav>ul at medium
+ @mixin nav-ul-at-medium {
+   @include respond-to('medium'){
+     position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+   }
+ }
+/* second stage (the mega-menu) */
+/// Mixin which rules the megamenu at medium
+@mixin megamenu-at-medium {
+  @include respond-to('medium'){
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap; 
+  width: 100%;
+  top: -9999px;
+  left: 0;
+  padding: 20px 20px 0 20px;
+  background: #fff;
+  text-align: center;
+  border-top: 5px solid purple;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}}
+
+
+/// Mixin for the layout at breakpoint medium
+@mixin flex-nth {
+&:nth-child(2n){
+      flex-basis: 500px;
+}}
+
+
+/// Mixin 
+@mixin color($white) {
+  color: $white
+}
+
+
+

@@ -1,0 +1,47 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 100%;
+    align-items: center;
+    
+   
+    
+
+     @include respond-to('medium') {
+        flex-direction: row;
+        .foot {
+    margin: 15px 5px;   
+        }
+    }
+    
+
+   
+}
+
+.foot {
+    display: flex;
+    width: 100%;
+    margin: 5px 0px;
+    align-content: center;
+    height: 200px;
+    
+    img {
+        width: 100%;
+        border: 1px solid purple;
+    }
+@include respond-to('medium') {
+flex: 1 1 33,33%;
+align-items: center;
+justify-content: center;
+
+
+img{
+    height: 200px;
+        
+
+}
+ 
+}
+
+}

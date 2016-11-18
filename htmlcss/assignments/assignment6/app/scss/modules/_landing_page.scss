@@ -1,0 +1,38 @@
+body {
+@include page-bg ("../images/driving.jpg");
+}
+img {
+  width: 100%;
+  
+}
+
+
+.landingpage {
+  
+  display: flex;
+  justify-content: center;
+  width:400px;
+border-radius: 5px;
+padding:10px;
+height:50px;
+position:absolute;
+
+top:50%;
+left:50%;
+
+
+
+}
+  
+
+
+.landingpage a {
+    margin-top:40px;
+margin-left:200px;
+    text-decoration: none; 
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+
