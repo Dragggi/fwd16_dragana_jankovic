@@ -7,16 +7,25 @@ img {
 }
 
 
+
+
+
+
+
+
 .landingpage {
   
   display: flex;
   justify-content: center;
-  width:400px;
+  
+
+width:400px;
 border-radius: 5px;
 padding:10px;
 height:50px;
 position:absolute;
-
+margin-top:-80px;
+margin-left:-200px;
 top:50%;
 left:50%;
 
@@ -27,8 +36,6 @@ left:50%;
 
 
 .landingpage a {
-    margin-top:40px;
-margin-left:200px;
     text-decoration: none; 
     color: white;
     font-weight: bold;
