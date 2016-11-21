@@ -1,0 +1,64 @@
+//Placeholders and classes: ;
+
+/// Default settings for the body
+%default {
+
+	text-decoration: none;
+	list-style-type: none;
+}
+
+/// Default settings for the nav
+%nav-default {
+  width:100%;
+   
+   
+	 
+}
+
+/// Settings for the label after
+%nav-input {
+	position: absolute;
+  display:none;
+}
+
+%nav-label {
+	position:relative;
+  display:block;
+  min-height:2em;
+  @include page-bg ("../images/binding-dark.png");
+background-color: map-get($color, main);
+  
+  
+
+&:after {
+		@include label-after;
+}}
+
+/// The nav ul
+%nav-ul {
+	 display:none;
+  position:relative;
+  width: 100%;
+  
+	@include page-bg ("../images/binding-dark.png");
+background-color: map-get($color, main);
+}
+	
+%nav-a {
+	display:block;
+    color:black;
+    
+}
+
+/// Placeholder for the flexcards at default
+%flexcard-item {
+  display: flex;
+   
+    flex-direction: column;
+    margin: 1px 0;
+    width: 33,33%;
+    @include respond-to('medium'){
+      flex-wrap: wrap;
+    }
+}
+

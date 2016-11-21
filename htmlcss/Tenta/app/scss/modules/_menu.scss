@@ -1,0 +1,108 @@
+li > a:after 
+{ content:  ' ↓';}
+li > a:only-child:after 
+{ content:  '' ; }
+
+/// Nested code for the rules of nav-menu with placeholders
+#nav {
+ @extend %nav-default; 
+ @include default-nav-at-medium;
+    
+ ul li a {
+    @extend %nav-a;
+ }
+
+}
+
+
+
+ #nav {
+
+ > ul {
+  @extend %nav-ul;
+  @include nav-ul-at-medium;
+  > li > a {
+      padding: 15px 25px;
+      &:hover {
+  background: purple;
+    }
+  }
+
+}
+ }
+
+
+/// Rules for the click-nav in mobile
+
+#nav {
+input.trigger {
+  @extend %nav-input;
+  }
+
+  label.menu {
+  @extend %nav-label; 
+  @include no-label-at-medium;
+   a{
+     display: none;
+   }
+  }    
+ 
+ input.trigger:checked ~  ul, #nav input.trigger:checked ~ ul li il {
+  display: block;
+}
+}
+
+#nav ul.megamenu ul {
+ 
+       width: 100%;
+  
+ 
+  @include respond-to('large') {
+     
+    width: 25%;
+
+}
+  }
+
+ 
+
+
+/// Rules for the megamenu ul 
+
+#nav {
+ul.megamenu {
+   @include megamenu-at-medium;
+
+}
+  @include respond-to('medium'){
+  li a {
+      margin-top: 10px;
+  transition: 0.5s;
+  color: black;
+  &:hover {
+    color: black;
+}
+  }}
+
+
+h4 {
+    margin-bottom: 15px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 20px;
+
+}
+
+}
+
+
+
+#nav ul li:hover ul.megamenu {
+  top: 100%;
+}
+
+/// ul marked when hoverd
+@include respond-to('medium'){
+#nav > ul > li:hover {
+  background: white;
+}}

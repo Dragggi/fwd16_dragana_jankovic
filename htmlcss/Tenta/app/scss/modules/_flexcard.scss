@@ -1,0 +1,87 @@
+//Intialize flex-card
+
+#firstcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     padding-top: 15%;
+    @include respond-to('medium'){
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+
+.round-flex {
+    display: flex;
+     justify-content: center;
+    align-items: center;
+     border: 2px solid red;
+     border-radius: 80%;
+     width: 250px;
+     height: 250px;
+     margin: 10px;
+}
+
+img.roundpic {
+    height: 150px;
+   width: 170px;
+}
+
+
+
+span {
+    text-align: center;
+}
+
+
+
+
+
+.reward-text:before {
+    display: flex;
+    content:"-Kill this Poacher - REWARD $";
+    margin: 10px;
+    
+    font-size: 16pt;
+}
+
+img.flex-pic  {
+    width: 200px;
+    height: 200px;
+}
+
+.orangebox {
+    display: flex;
+    margin: 10px 0;
+    background-color:map-get($color, theorange);
+    font-size: 13pt;
+    
+    @include respond-to('medium'){
+        width: 30%;
+        
+        
+    }
+    
+    
+    p {
+        margin: 0;
+    }
+}
+
+.killhim {
+    font-size: 16pt;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.flex-cards {
+    @extend %flexcard-item;
+    @include select-card(2n){
+    @include respond-to('medium') {
+    width: 66.66%;
+    
+    
+    }}
+    }

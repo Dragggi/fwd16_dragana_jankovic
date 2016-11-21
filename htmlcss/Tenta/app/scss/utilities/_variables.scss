@@ -1,0 +1,38 @@
+/// @author Dragana Jankovic
+/// Font icons
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+/// Text setup
+$text: (
+  body: unquote("'Merriweather', serif"),
+  body-weight: 100,
+  headline: unquote("'Oswald', 'Helvetica Neue', Arial, sans-serif"),
+  headline-weight: 100,
+) !default;
+
+
+/// COLORS map
+$color: (
+  main: #916c55,
+  theorange: #ff8c00,
+  bright: #fff
+) !default;
+
+
+
+
+/// Color def map for page-layout using color map
+
+
+
+/// Breakpoint map
+
+$breakpoints: (
+  'small':  ( min-width:  32.188em ),
+  'medium': ( min-width:  48.000em ),
+  'large':  ( min-width: 62.000em ),
+  'wide':  ( min-width: 75.000em )
+) !default;
+
+
