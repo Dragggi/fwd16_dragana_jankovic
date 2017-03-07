@@ -59,12 +59,9 @@ img.flex-pic  {
     font-size: 13pt;
     
     @include respond-to('medium'){
-        width: 30%;
+        width: 80%;
         
-        
-    }
-    
-    
+    } 
     p {
         margin: 0;
     }
@@ -77,10 +74,12 @@ img.flex-pic  {
 }
 
 .flex-cards {
+    flex-basis: 33,33%;
     @extend %flexcard-item;
     @include select-card(2n){
     @include respond-to('medium') {
     width: 66.66%;
+    flex-basis: 66.66;
     
     
     }}
