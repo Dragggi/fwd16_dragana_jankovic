@@ -9,7 +9,10 @@ session_start();
             }
             echo "Welcome ".$_SESSION['name'];
 // retrieve the correct id from planemaker and select the correct planemaker info based on ID
+            
 $planeMakerID = $_GET['planeMakerID'];
+
+
 $sql = "SELECT * FROM plane_maker WHERE planeMakerID=:planeMakerID"; 
 $query = $pdo->prepare($sql); 
 $query->execute(array(':planeMakerID' => $planeMakerID)); 
@@ -54,20 +57,32 @@ header("Location: aeroplaneMaker.php");
 <body> 
 <a href="aeroplaneMaker.php">Home</a> 
 <br/><br/> 
-
+//
 <form name="form1" method="post" action="aeroplaneMakerEdit.php"> 
-<table border="0"> 
+        <table  border="0">
 <tr> 
-<td>Maker Name</td> 
+<!-- Resultatet av vår sql fråga från rad34 lägger vi en textarea, man kan alltid
+blanda html och php som ni ser, genom att flika in php taggar som start och slut-->
+<td> 
+<br>
 
-<td><input type="text" name="planeMakerName" value="<?php echo $planeMakerName;?>"/></td>
+<?php echo $planeMakerName;?> <br><input type='text' name="planeMakerName" > 
+<br><br>
+<input type="submit" name="update" value="update">
+<br><br>
+</td>
 </tr> 
-<tr>  
-<td><input type="hidden" name="planeMakerID" value=<?php echo $_GET['planeMakerID'];?></td>
-<td><input type="submit" name="update" value="Update"></td> 
+<tr>
+<!-- Vi visar inte id för den skämtet vi vill redigera -->    
+<input type="hidden" name="planeMakerID" value=<?php echo $_GET['planeMakerID'];?>
 </tr> 
 </table> 
 </form>
+<!--För att logga ut skickar vi användaren till en sida där sessionen avslutas
+med session_destroy--> 
+
+//
+
 <a href="logout.php">Logout</a>
     </body>
 </html>

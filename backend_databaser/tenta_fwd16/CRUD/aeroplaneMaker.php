@@ -76,7 +76,7 @@ td {
         echo "<td>".$row['planeMakerName']."</td>";
         
 		
-        echo "<td><a href=\"aeroplaneMakerEdit.php?planeMakerID=$row[planeMakerName]\">Edit</a> | <a href=\"aeroplaneMakerDelete.php?planeMakerID=$row[planeMakerName]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
+        echo "<td><a href=\"aeroplaneMakerEdit.php?planeMakerID=$row[planeMakerID]\">Edit</a> | <a href=\"aeroplaneMakerDelete.php?planeMakerID=$row[planeMakerID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
     } 
     
     ?>
