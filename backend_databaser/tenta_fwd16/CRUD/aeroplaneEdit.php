@@ -88,17 +88,14 @@ if(empty($aeroplaneName)) {
 echo "<font color='red'>Name field is empty.</font><br/>"; 
 } 
 
-if(empty($planeMakerID)) { 
-echo "<font color='red'>Director field is empty.</font><br/>"; 
+if(empty($planeMakerName)) { 
+echo "<font color='red'>PlaneMakerName field is empty.</font><br/>"; 
 } 
 
 
 } else { 
 /*
- * vi använder sql syntaxen för uppdateringar och skickar med id för raden.
- * OBS att man i PDO använder platshållare (movieName=:movieName) där :movieName är
- * namnet på platshållaren för att para ihop det som finns i  formuläret till
- *  databasen. Detta läggs till i variablen $sql
+
 */
 
 $sql = "UPDATE aeroplane SET aeroplaneName=:aeroplaneName, aeroplaneTopSpeed=:aeroplaneTopSpeed, aeroplaneRange=:aeroplaneRange, planeMakerID=:planeMakerID WHERE aeroplaneID=:aeroplaneID";
@@ -159,15 +156,15 @@ td {
 <!-- Resultatet av vår sql fråga från rad34 lägger vi en textarea, man kan alltid
 blanda html och php som ni ser, genom att flika in php taggar som start och slut-->
 <td> 
-Title: <?php echo $aeroplaneName;?> <br><input type='text' name="aeroplaneName" > 
+PlaneName: <?php echo $aeroplaneName;?> <br><input type='text' name="aeroplaneName" > 
 <br><br>
-Duration: <?php echo $aeroplaneTopSpeed;?> min <br><input type='text' name="aeroplaneTopSpeed" > 
+TopSpeed: <?php echo $aeroplaneTopSpeed;?> <br><input type='text' name="aeroplaneTopSpeed" > 
 <br><br>
-Copies:  <?php echo $aeroplaneRange;?>  <br><input type='number' name="aeroplaneRange" > 
+PlaneRange:  <?php echo $aeroplaneRange;?>  <br><input type='number' name="aeroplaneRange" > 
 </td>
 </tr> 
 <tr> 
-<td>Category</td> 
+<td>PlaneMaker</td> 
 <td>
 <!-- För att användare inte ska behöva stoppa in siffror för en fk_categoryId så skapar
 vi en dropdown, där resultatet av sql frågan från rad 47 $directorQuery stoppar in
@@ -197,9 +194,9 @@ echo "<option value=\"{$planeMaker['planeMakerID']}\">{$planeMaker['planeMakerNa
 
 <tr>
 <!-- Vi visar inte id för den skämtet vi vill redigera -->    
-<td><input type="hidden" name="aeroplaneID" value=<?php echo $_GET['aeroplaneID'];?></td> 
+
 <td><input type="submit" name="update" value="Update"></td> 
-</tr> 
+
 </table> 
 </form>
 <!--För att logga ut skickar vi användaren till en sida där sessionen avslutas

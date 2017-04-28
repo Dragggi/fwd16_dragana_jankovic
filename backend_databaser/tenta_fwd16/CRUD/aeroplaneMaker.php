@@ -26,7 +26,7 @@ echo "Welcome ".$_SESSION['name']."<br>";
  * ska redigera eller ta bort en rad.
  */
 
-$result = $pdo->query("call sp_aeroplane");
+$result = $pdo->query("call sp_show_planeMaker");
 
 
 

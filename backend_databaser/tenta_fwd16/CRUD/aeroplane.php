@@ -31,7 +31,7 @@ $result = $pdo->query("call sp_aeroplane");
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Film </title>
+        <title>Plane </title>
                <style>
 		body {
     background-color: lightblue;
@@ -44,7 +44,7 @@ td {
         </style>
     </head>
     <body>
-<!-- Länk till lägga till nya film -->        
+<!-- Länk till lägga till nya plan -->        
 <a href="aeroplaneAdd.php">Add New Plane</a>
 <a href="aeroplaneMaker.php">PlaneMaker</a><br/><br/>
  
